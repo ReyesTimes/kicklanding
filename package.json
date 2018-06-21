@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/ReyesTimes/kicklanding/issues"
   },
-  "homepage": "https://github.com/ReyesTimes/kicklanding#readme"
+  "homepage": "https://github.com/ReyesTimes/kicklanding#readme",
+  "devDependencies": {
+    "webpack": "^4.12.0"
+  }
 }
