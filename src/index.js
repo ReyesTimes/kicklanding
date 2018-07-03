@@ -1,1 +1,1 @@
-console.log('fine');
+import './styl/example.styl';

@@ -1,3 +1,5 @@
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+
 module.exports = {
     entry: './src/index.js',
     module: {
@@ -8,10 +10,25 @@ module.exports = {
                 use: {
                     loader: 'babel-loader',
                     options: {
-                        presets: ['es2015']
+                        presets: ['babel-preset-es2015']
                     }
                 }
+            },
+            {
+              test: /\.styl$/,
+              use: ExtractTextPlugin.extract({
+                use: [
+                  "css-loader",
+                  {
+                    loader: 'stylus-loader'
+                  }
+                ]
+              })
             }
         ]
-    }
+    },
+    plugins: [
+      // aquí van los plugins
+      new ExtractTextPlugin("css/[name].css"),
+    ]
 };
