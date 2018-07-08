@@ -1,1 +1,1 @@
-import './styl/example.styl';
+import './styl/main.styl';

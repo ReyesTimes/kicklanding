@@ -20,7 +20,8 @@ module.exports = {
                 use: [
                   "css-loader",
                   {
-                    loader: 'stylus-loader'
+                    loader: 'stylus-loader',
+                    options: { minimize: true }
                   }
                 ]
               })
@@ -28,7 +29,6 @@ module.exports = {
         ]
     },
     plugins: [
-      // aquí van los plugins
       new ExtractTextPlugin("css/[name].css"),
     ]
 };
